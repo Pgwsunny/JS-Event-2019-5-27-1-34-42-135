@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>定时器示例</title>
+</head>
+
+<body>
+
+    <input type="text" id="result">
+
+    <input type="button" onclick="start()" value="开始">
+    <input type="button" onclick="stop()" value="结束">
+
+    <script>
+        var time = "";
+        function start() {
+            document.getElementById("result").value = "";
+            time = new Date();
+        }
+
+        function stop() {
+            var time2 = new Date();
+            var bet = (time2 - time)/1000;
+            document.getElementById("result").value=bet + "s";
+        }
+    </script>
+</body>
+
+</html>

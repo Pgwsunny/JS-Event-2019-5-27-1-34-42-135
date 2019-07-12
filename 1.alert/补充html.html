@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>事件监听</title>
+  </head>
+  <body>
+  
+  <ul id="no">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+  </ul>
+  
+  <script>
+      onload = function() {
+                var lis = document.getElementsByTagName("li");
+                var funny = function(i){
+                    lis[i].onclick = function(){
+                        alert(i+1);
+                    }
+                }
+                for(var i=0;i<lis.length;i++){
+                    funny(i);
+                }
+            }
+  </script>
+  </body>
+  </html>
